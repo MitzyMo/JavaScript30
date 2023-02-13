@@ -61,13 +61,13 @@
 <script>
 // Function to play sound based on the key the user presses.
 function playSound(e){
-  // variable that will retrieve the key they are pressing
+  // variable that will relate the audio with the pressed key.
   const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
   //
   const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
   // the return is used to stop the function since there is no data matching
   if(!audio)return; 
-  // Used to reset the play action to lay continuously
+  // Used to reset the play action conti....
   audio.currentTime = 0;
   audio.play();
   key.classList.add('playing');
